@@ -1,0 +1,11 @@
+.header{
+    background-color: blue;
+    width: 100vw;
+    height: 20vh;
+    text-align: center;
+
+}
+.header--logo{
+    height: 18vh;
+    margin: 1vh 0;
+}

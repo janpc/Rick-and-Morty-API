@@ -1,0 +1,45 @@
+@import './header.css';
+@import './elements.css';
+body{
+    margin:0;
+    padding:0;
+}
+
+.content{
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.sidebar{
+    /* display: flex; */
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: red;
+    width: 20%;
+    height: 80vh;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: width 1.5s ease-in-out;
+}
+.content--full .sidebar{
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.main{
+    background-color: blueviolet;
+    flex-grow: 8;
+    width: 80%;
+    margin:0;
+    transition: width 1.5s ease-in-out;
+}
+
+.content--full .main{
+    width: 0%;
+}
