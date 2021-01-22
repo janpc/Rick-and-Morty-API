@@ -1,0 +1,67 @@
+.main--episode{ 
+    display: flex;
+    width: 80%;
+    height: 80%;
+    margin: 5% auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: aliceblue;
+    align-items: center;
+}
+.main--episode--grid{
+    width: 50%;
+    height: 100%;
+    display:grid;
+    grid-template-areas: "img"
+    "title"
+    "date";
+    grid-template-rows: 75% 15% 10%;
+    grid-template-columns: 100%;
+}
+
+.main--episode--img{
+    margin:0;
+    padding:0;
+    grid-area: img;
+    height:100%;
+    text-align: center;
+}
+.main--episode--img>img{
+    border-radius: 10px;
+    height:90%;
+    margin: 5% 0;
+}
+.main--episode--title{
+    text-align: center;
+    margin:0;
+    padding:0;
+    grid-area: title;
+
+}
+.main--episode--title>h2{
+    margin: 0 0.5em;
+    font-size: 1.7em;
+}
+.main--episode--date{
+    margin:0;
+    padding:0;
+    grid-area: date;
+    text-align: center;
+}
+.main--episode--date>p{
+    margin: 0 0.5em;
+    font-size: larger;
+}
+.main--episode--code{
+    margin:0;
+    padding:0;
+    grid-area: code;
+    background-color: magenta;
+}
+.main--episode--characters{
+    width:50%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    background-color: blue;
+}

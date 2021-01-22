@@ -30,7 +30,7 @@
 }
 
 .episodeList--episode:hover .episodeList--episode--background, .episodeList--episode:focus .episodeList--episode--background{
-    background: none;
+    background: linear-gradient(to top, #FFFC, #FFF0);
 }
 .episodeList--episode--title{
     text-align: center;
@@ -42,5 +42,5 @@
 }
 
 .episodeList--episode:hover .episodeList--episode--title,.episodeList--episode:focus .episodeList--episode--title{
-
+    color: black;
 }

@@ -12,6 +12,7 @@ function printEpisode(episode){
     $background.appendChild($title);
     $background.classList.add('episodeList--episode--background');
     $episode.appendChild($background);
+    $episode.setAttribute('data-url', episode.url);
 
     document.getElementById("sidebar").appendChild($episode);
 }
