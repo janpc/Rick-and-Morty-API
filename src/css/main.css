@@ -4,6 +4,7 @@
 body{
     margin:0;
     padding:0;
+    overflow: hidden;
 }
 
 .content{
@@ -44,3 +45,7 @@ body{
 .content--full .main{
     width: 0%;
 }
+
+
+
+

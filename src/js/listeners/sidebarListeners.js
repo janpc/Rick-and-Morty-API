@@ -1,22 +1,24 @@
 import { $content, $sidebar } from "../data/domElements.js";
 import { getUrl } from "../data/apiRequests.js"
+import { showRandomImage } from "../data/images.js";
 
 function sidebarListeners(){
     $sidebar.addEventListener('click', function(event){
         if(event.target.classList.contains('episodeList--episode')){
-            $content.classList.remove('content--full');
-            let url=event.target.getAttribute('data-url');
-            getUrl(url);
+            showEpisode(event.target)
         }else if(event.target.classList.contains('episodeList--episode--background')){
-            $content.classList.remove('content--full');
-            let url=event.target.parentNode.getAttribute('data-url');
-            getUrl(url);
+            showEpisode(event.target.parentNode)
         }else if(event.target.classList.contains('episodeList--episode--title')){
-            $content.classList.remove('content--full');
-            let url=event.target.parentNode.parentNode.getAttribute('data-url');
-            getUrl(url);
+            showEpisode(event.target.parentNode.parentNode)
         }
     });
+}
+
+function showEpisode(target){
+    $content.classList.remove('content--full');
+    let url=target.getAttribute('data-url');
+    getUrl(url);
+    showRandomImage();
 }
 
 export {sidebarListeners};
