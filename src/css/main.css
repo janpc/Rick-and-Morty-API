@@ -2,9 +2,13 @@
 @import './elements.css';
 @import './mainEpisode.css';
 body{
+
     margin:0;
     padding:0;
     overflow: hidden;
+    font-family: 'Nanum Pen Script', cursive;
+    background-size: cover;
+    background-position: center;
 }
 
 .content{
@@ -20,7 +24,6 @@ body{
     flex-wrap: nowrap;
     flex-direction: column;
     flex-wrap: nowrap;
-    background-color: red;
     width: 20%;
     height: 80vh;
     margin:0;
@@ -35,7 +38,6 @@ body{
     flex-wrap: wrap;
 }
 .main{
-    background-color: blueviolet;
     flex-grow: 8;
     width: 80%;
     margin:0;
@@ -44,6 +46,57 @@ body{
 
 .content--full .main{
     width: 0%;
+}
+
+.portal{
+    position:absolute;
+    width: 0%;
+    top: 35%;
+    left: 60%;
+    z-index: 5;
+    animation: portalAnimation 2s ease-in-out;
+}
+
+@keyframes portalAnimation{
+    0%{
+        width: 0%;
+        top: 35%;
+        left: 60%;
+    }
+    20%{
+        width: 100%;
+        top: -15%;
+        left: 10%;
+    }
+    80%{
+        width: 100%;
+        top: -15%;
+        left: 10%;
+    }
+    100%{
+        width: 0%;
+        top: 35%;
+        left: 60%;
+    }
+}
+.handMadeBorder{
+    border: 2px solid black;
+    border-radius: 7%  4% 8% 5% / 2% 4% 2%  9%;
+    text-transform: uppercase;
+    position: relative;
+
+}
+.handMadeBorder::before {
+    content: '';
+    border: 2px solid #111111;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
 }
 
 

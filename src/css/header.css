@@ -1,8 +1,8 @@
 .header{
-    background-color: blue;
     width: 100vw;
     height: 20vh;
     text-align: center;
+    background: linear-gradient(to bottom, #000C, #0000);
 
 }
 .header--logo{

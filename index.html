@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer type="module" src='src/js/main.js'></script>
     <link rel="stylesheet" href="src/css/main.css">
@@ -13,34 +15,16 @@
         <header class="header">
             <img class="header--logo" src="https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png">
         </header>
-        <section id="sidebar" class="sidebar">
-        </section>
         <main class="main">
             <section id='mainEpisode' class="main--episode">
-                <div class='main--episode--grid'>
-                    <div class="main--episode--img">
-                        <img  src="https://upload.wikimedia.org/wikipedia/en/b/b8/Rick_and_Morty_season_1.png">
-                    </div>
-                    <div class="main--episode--title">
-                        <h2>Interdimensional Cable 2: Tempting Fate</h2>
-                    </div>
-                    <div class="main--episode--date">
-                        <p>Date: December 9, 2013</p>
-                    </div>
-                    <div class="main--episode--code">
-                        <p>S01E02</p>
-                    </div>
-                </div>
-                <div class="main--episode--characters">
-                    <h1 class="neon" data-text="Neon" contenteditable>Neon</h1>
-                    <div class="gradient"></div>
-                    <div class="spotlight"></div>
-                </div>
             </section>
             <section class="main--character"></section>
             <section class="main--location"></section>
         </main>
+        <section id="sidebar" class="sidebar">
+        </section>
         <img id='randomImage' class="randomImage" src="">
+        <img id='portal' class="portal" src='./src/img/portal.gif'>
     </div>
 </body>
 </html>

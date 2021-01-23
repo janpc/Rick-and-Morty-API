@@ -1,12 +1,13 @@
 import covers from './covers.js'
 
 function printEpisode(episode){
-    let season=episode.episode.substring(0,3)
+    const season=episode.episode.substring(0,3);
     const $episode=document.createElement('button');
     const $background=document.createElement('div');
     const $title=document.createElement('h3');
-    $episode.setAttribute('style', `background-image:${covers[season]}`);
+    $episode.setAttribute('style', `background-image: url(${covers[season]}); border-radius: ${randomBorderRadius()}; `);
     $episode.classList.add('episodeList--episode');
+    $episode.classList.add('handMadeBorder');
     $title.innerHTML=episode.episode+ ': '+ episode.name;
     $title.classList.add('episodeList--episode--title');
     $background.appendChild($title);
@@ -22,6 +23,19 @@ function printEpisodes(data){
     data.forEach(episode => {
         printEpisode(episode);
     });
+}
+
+function randomBorderRadius(){
+    let borderRadius='';
+    for(let i=0; i<8; i++){
+        if(i==4){
+            borderRadius+=' / ';
+        }
+        const percent = Math.random() * 15;
+        borderRadius+=percent+'% ';
+    }
+    
+     return borderRadius;
 }
 
 export {printEpisodes};
