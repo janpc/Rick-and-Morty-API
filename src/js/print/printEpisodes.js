@@ -5,7 +5,7 @@ function printEpisode(episode){
     const $episode=document.createElement('button');
     const $background=document.createElement('div');
     const $title=document.createElement('h3');
-    $episode.setAttribute('style', `background-image: url(${covers[season]}); border-radius: ${randomBorderRadius()}; `);
+    $episode.setAttribute('style', `background-image: url(${covers[season]}); border-radius: ${randomBorderRadius(0,15)}; `);
     $episode.classList.add('episodeList--episode');
     $episode.classList.add('handMadeBorder');
     $title.innerHTML=episode.episode+ ': '+ episode.name;
@@ -25,17 +25,17 @@ function printEpisodes(data){
     });
 }
 
-function randomBorderRadius(){
+function randomBorderRadius(min, max){
     let borderRadius='';
     for(let i=0; i<8; i++){
         if(i==4){
             borderRadius+=' / ';
         }
-        const percent = Math.random() * 15;
+        const percent =min + Math.random() * (max-min);
         borderRadius+=percent+'% ';
     }
     
      return borderRadius;
 }
 
-export {printEpisodes};
+export {printEpisodes, randomBorderRadius};

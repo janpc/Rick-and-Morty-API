@@ -1,85 +1,128 @@
-.main--episode{ 
-    display: flex;
-    width: 80%;
-    height: 90%;
-    margin: 2.5% auto;
-    overflow: hidden;
-    background-color: aliceblue;
-    align-items: center;
-    box-shadow: 2px 2px 15px black;
-    border: 3px solid black;
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    text-transform: uppercase;
-    position: relative;
-    
+.main--episode {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 80%;
+  height: 72vh;
+  margin: 2.5% auto;
+  overflow: hidden;
+  background-color: aliceblue;
+  align-items: center;
+  box-shadow: 2px 2px 15px black;
+  border: 3px solid black;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  text-transform: uppercase;
+  position: relative;
+  background-color: #353535;
 }
-.main--episode::before {
-        content: '';
-        border: 2px solid #353535;
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-    }
-.main--episode--grid{
-    width: 50%;
-    height: 100%;
-    display:grid;
-    grid-template-areas: "img"
+/*  */
+.content--full .main--episode {
+  height: 0;
+}
+.main--episode--grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "img"
     "title"
     "date";
-    grid-template-rows: 75% 13% 12%;
-    grid-template-columns: 100%;
+  grid-template-rows: 75% 13% 12%;
+  grid-template-columns: 100%;
+  border-radius: 0% 3% 2% 0 / 0 2% 4% 0;
+  border-right: 2px solid black;
+  background-color: white;
 }
 
-.main--episode--img{
-    margin:0;
-    padding:0;
-    grid-area: img;
-    height:100%;
-    text-align: center;
+.main--episode--img {
+  margin: 0;
+  padding: 0;
+  grid-area: img;
+  height: 100%;
+  text-align: center;
 }
-.main--episode--img>img{
-    height:90%;
-    margin: 5% 0;
-    box-shadow: 1px 1px 1px black;
+.main--episode--img > div {
+  width: 80%;
+  height: 90%;
+  margin: 5% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 1px 1px 1px black;
+  border: 2px solid black;
+  border-radius: 7%  4% 8% 5% / 2% 4% 2%  9%;
+  text-transform: uppercase;
+  position: relative;
 }
-.main--episode--title{
-    text-align: center;
-    margin:0;
-    padding:0;
-    grid-area: title;
+.main--episode--title {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  grid-area: title;
+}
+.main--episode--title > h2 {
+  margin: 0 0.5em;
+  font-size: 2.2em;
+  line-height: 0.9em;
+}
+.main--episode--date {
+  margin: 0;
+  padding: 0;
+  grid-area: date;
+  text-align: center;
+}
+.main--episode--date > p {
+  margin: 0 0.2em;
+  font-size: x-large;
+}
+.main--episode--code {
+  margin: 0;
+  padding: 0;
+  grid-area: code;
+}
+.main--episode--characters {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-radius: 2% 0 0 3%/ 4% 0 0 2%;
+  border-left: 2px solid black;
+  background-color: white;
+}
+.main--episode--character {
+  width: 19%;
+  margin: 3%;
+  text-align: center;
+  padding-top: 1em;
+  border: none;
+  background-color: #0000;
+  padding: 0;
+}
+.main--episode--character:hover, .main--episode--character:focus{
+  outline:none;
+}
+.main--episode--characterImage {
+  background-position: center;
+  background-size: cover;
+  padding: 50%;
+  border: 2px solid black;
+  border-radius: 50% 45% 55% 40%/ 40% 50% 35% 55%;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 1px 1px 5px black;
+}
+.main--episode--character:hover .main--episode--characterImage,
+.main--episode--character:focus .main--episode--characterImage {
+    box-shadow: 0 0 8px 1px lime, 0 0 3px 1px white;
+    border-color:#01b4c6;
+}
 
+.main--episode--character > p {
+  margin: 0;
+  margin-top: 0.5em;
+  padding: 0;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: x-large;
 }
-.main--episode--title>h2{
-    margin: 0 0.5em;
-    font-size: 2.2em;
-    line-height: 0.9em;
-}
-.main--episode--date{
-    margin:0;
-    padding:0;
-    grid-area: date;
-    text-align: center;
-}
-.main--episode--date>p{
-    margin: 0 0.2em;
-    font-size: x-large;
-}
-.main--episode--code{
-    margin:0;
-    padding:0;
-    grid-area: code;
-}
-.main--episode--characters{
-    width:50%;
-    height: 100%;
-    margin:0;
-    padding:0;
-    background-color: blue;
-}
-

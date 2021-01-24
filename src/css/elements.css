@@ -9,6 +9,7 @@
     background-size: cover;
     overflow: hidden;
     transition: width 1.5s ease-in;
+    box-shadow: 2px 2px 5px black;
     
 }
 .content--full .episodeList--episode{
