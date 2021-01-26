@@ -10,15 +10,17 @@
     overflow: hidden;
     transition: width 1.5s ease-in;
     box-shadow: 2px 2px 5px black;
-    
+    filter: grayscale(0.5);
 }
 .content--full .episodeList--episode{
     width: 18%;
     margin:1%;
     height: 30vh;
+    filter: grayscale(0);
 }
 .episodeList--episode:hover, .episodeList--episode:focus{
     outline: none;
+    filter: grayscale(0);
 }
 .episodeList--episode--background{
     position:relative;
@@ -26,12 +28,12 @@
     margin:0;
     width: 100%;
     height:100%;
-    background: linear-gradient(to top, #000A, #0000);
+    background: linear-gradient(to top, #0007, #0000);
     
 }
 
 .episodeList--episode:hover .episodeList--episode--background, .episodeList--episode:focus .episodeList--episode--background{
-    background: linear-gradient(to top, #FFFC, #FFF0);
+    background: linear-gradient(to top, #01b4c656, #FFF0);
 }
 .episodeList--episode--title{
     text-align: center;
@@ -42,6 +44,6 @@
 
 }
 
-.episodeList--episode:hover .episodeList--episode--title,.episodeList--episode:focus .episodeList--episode--title{
-    color: black;
-}
+.episodeList--episode:hover .episodeList--episode--title,.episodeList--episode:focus .episodeList--episode--title{ 
+    color:black;
+} 

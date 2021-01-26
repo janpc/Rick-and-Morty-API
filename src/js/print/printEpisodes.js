@@ -5,7 +5,7 @@ function printEpisode(episode){
     const $episode=document.createElement('button');
     const $background=document.createElement('div');
     const $title=document.createElement('h3');
-    $episode.setAttribute('style', `background-image: url(${covers[season]}); border-radius: ${randomBorderRadius(0,15)}; `);
+    $episode.setAttribute('style', `background-image: url(${covers[season]}); border-radius: ${randomBorderRadius(0,10)}; `);
     $episode.classList.add('episodeList--episode');
     $episode.classList.add('handMadeBorder');
     $title.innerHTML=episode.episode+ ': '+ episode.name;

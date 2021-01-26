@@ -2,11 +2,13 @@ import { $content, $sidebar } from "../data/domElements.js";
 import { getUrl, getCharacters, getEpisodes } from "../data/apiRequests.js";
 import { showRandomImage } from "../data/images.js";
 import { printMainEpisode } from "../print/printMainEpisode.js";
+import { setBack } from "../data/back.js";
 
 function sidebarListeners() {
   $sidebar.addEventListener("click", function (event) {
     if (event.target.classList.contains("episodeList--episode")) {
       showEpisode(event.target);
+      
     } else if (
       event.target.classList.contains("episodeList--episode--background")
     ) {
@@ -21,6 +23,7 @@ function sidebarListeners() {
 function showEpisode(target) {
   $content.classList.remove("content--full");
   let url = target.getAttribute("data-url");
+  setBack(url, printMainEpisodeInfo);
   getUrl(url, printMainEpisodeInfo);
   showRandomImage();
 }

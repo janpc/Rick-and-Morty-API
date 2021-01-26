@@ -1,5 +1,5 @@
 import {$mainEpisode} from '../data/domElements.js'
-import { addMainEpisodeListsners } from '../listeners/mainEpisodeListeners.js';
+import { addMainEpisodeListsners, hideAllModals } from '../listeners/mainEpisodeListeners.js';
 import covers from './covers.js'
 
 function printMainEpisode(data){
@@ -16,9 +16,13 @@ function printMainEpisode(data){
             <p>${data.episode}</p>
         </div>
     </div>
-    <div id="mainEpisodeCharacters" class="main--episode--characters"></div>`;
+    <div id="mainEpisodeCharacters" class="main--episode--characters">
+        <h3>Characters</h3>
+    </div>`;
 
     $mainEpisode.innerHTML=$episode;
+    hideAllModals();
+    $mainEpisode.classList.add('active');
     addMainEpisodeListsners();
 }
 

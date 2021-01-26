@@ -1,6 +1,7 @@
 @import './header.css';
 @import './elements.css';
 @import './mainEpisode.css';
+@import './mainCharacter.css';
 body{
 
     margin:0;
@@ -9,6 +10,9 @@ body{
     font-family: 'Nanum Pen Script', cursive;
     background-size: cover;
     background-position: center;
+
+    scrollbar-width: 12px;
+    scrollbar-color: var(#f1f1f177) var(#999);
 }
 
 .content{
@@ -102,18 +106,18 @@ body{
 ::-webkit-scrollbar {
     width: 12px;
     border-radius: 20% 25% 35% 20%/ 20% 30% 15% 35%;
-  }
-  ::-webkit-scrollbar-track {
-    background: #f1f1f177; 
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #777; 
-    border-radius: 20% 25% 35% 20%/ 20% 30% 15% 35%;
-    border: 2px solid black;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #999; 
-  }
+}
+::-webkit-scrollbar-track {
+background: #f1f1f177; 
+}
+::-webkit-scrollbar-thumb {
+background: #777; 
+border-radius: 20% 25% 35% 20%/ 20% 30% 15% 35%;
+border: 2px solid black;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #999; 
+}
 
 
 
