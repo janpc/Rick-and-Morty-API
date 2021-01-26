@@ -19,7 +19,7 @@ const rickAndMortyImages=[
 function showRandomImage(){
     if(canAnimate){
     const pos = Math.floor(Math.random() * (rickAndMortyImages.length));
-    const left = Math.floor(Math.random() * 70);
+    const left = Math.floor(Math.random() * 75);
     $randomImage.src = rickAndMortyImages[pos].src;
     $randomImage.classList.add('animate')
     $randomImage.setAttribute('style', rickAndMortyImages[pos].style+` left: ${left}%;`);

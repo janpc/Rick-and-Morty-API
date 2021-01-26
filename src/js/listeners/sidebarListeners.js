@@ -1,4 +1,4 @@
-import { $content, $sidebar } from "../data/domElements.js";
+import { $content, $showEpisodes, $sidebar } from "../data/domElements.js";
 import { getUrl, getEpisodes } from "../data/apiRequests.js";
 import { showRandomImage } from "../data/images.js";
 import { printMainEpisode } from "../print/printMainEpisode.js";
@@ -16,6 +16,9 @@ function sidebarListeners() {
     } else if (event.target.classList.contains("episodeList--episode--title")) {
       showEpisode(event.target.parentNode.parentNode);
     }
+  });
+  $showEpisodes.addEventListener('click', function(){
+    $content.classList.add("content--full")
   });
   detectScrollBottom();
 }

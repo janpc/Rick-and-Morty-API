@@ -1,0 +1,114 @@
+@media (min-width: 1000px) {
+  .showEpisodes{
+        display:none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sidebar{
+        width:0;
+        position:absolute;
+        display:none;
+    }
+    .content--full .sidebar {
+        display:block;
+        width:100%;
+        overflow: hidden;
+        overflow-y: scroll;
+        top: 20vh;
+      }
+      .main{
+          transition:none !important;
+      }
+    .main--episode--grid {
+        height: 72vh;
+      }
+      .main--character.active {
+        transition: height 0.5s ease-in-out;
+      }
+
+      .content--full .episodeList--episode{
+        width: 23%;
+    }
+
+     .showEpisodes{
+        display:block;
+        position:fixed;
+        bottom:0.5em;
+        right:0.5em;
+        font-family: 'Nanum Pen Script', cursive;
+        font-size: xx-large;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 22% 36% 45% 54% / 51% 41% 32% 24%;
+        box-shadow: 1px 1px 5px black;
+        z-index: 5;
+    }
+    .content--full .showEpisodes{
+        display:none;
+    }
+ }
+
+ @media (max-width: 800px) {
+    .header--logo{
+        height: auto;
+        max-height: 18vh;
+        max-width: 90%;
+        margin-top: 1vh;
+        vertical-align: baseline;
+    }
+    .header{
+        height: auto;
+    }
+    .content{
+        width:100vw;
+        margin:0;
+        padding:0;
+    }
+    .main--episode.active {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 100%;
+        width: 90%;
+        height: 75vh;
+        overflow: hidden;
+        overflow-y: scroll;
+        background-color: white;
+      }
+      
+      .main--episode--characters {
+        border:none;
+        overflow: visible;
+        border-radius: 0% 0 0 3%/ 0% 0 0 2%;
+      }
+      .main--episode--grid {
+          border:none;
+        border-radius: 0% 3% 0% 0 / 0 2% 0% 0;
+        height: 70vh;
+      }
+      .main--character.active {
+        width: 90%;
+        max-width: 500px;
+        height: 75vh;
+        margin: 0.5% auto;
+      }
+      .main--location.active {
+        width: 90%;
+        max-width: 500px;
+        height: 75vh;
+        margin: 0.5% auto;
+      }
+      .content--full .episodeList--episode{
+        width: 31%;
+    }
+ }
+ @media (max-width: 450px) {
+      .content--full .episodeList--episode{
+        width: 48%;
+    }
+ }
+ @media (max-width: 300px) {
+    .content--full .episodeList--episode{
+      width: 98%;
+  }
+}
