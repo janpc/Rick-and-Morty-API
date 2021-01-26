@@ -1,24 +1,31 @@
 import { getUrl } from "./apiRequests.js";
-
-let back={
-    function:null, 
-    url:null
-}
-let next={
+let lastPages=[]
+let actual={
     function:null, 
     url:null
 }
 
 function setBack(url, fun){
-    back.function=next.function;
-    back.url=next.url;
-    next.url=url;
-    next.function=fun;
+    if(actual.url!=null){
+        const newObject={
+            function: actual.function,
+            url: actual.url
+        }
+        lastPages.push(newObject);
+    }
+
+    actual.url=url;
+    actual.function=fun;
 }
 
 function goBack(){
-    getUrl(back.url, back.function);
-    setBack(back.url, back.function);
+    let index=lastPages.length-1;
+    getUrl(lastPages[index].url, lastPages[index].function);
+    actual={
+        function:lastPages[index].function, 
+        url:lastPages[index].url
+    }
+    lastPages.splice(-1,1);
 }
 
 export { setBack, goBack };

@@ -27,10 +27,10 @@ function getUrl(url, callback){
   });
 }
 
-function getCharacters(data){
-  axios.all(data.characters.map(link => axios.get(link)))
+function getCharacters(data, elementToPrint){
+  axios.all(data.map(link => axios.get(link)))
   .then(axios.spread(function (...res) {
-    printCharacters(res);
+    printCharacters(res, elementToPrint);
   }));
 }
 

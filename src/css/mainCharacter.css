@@ -102,6 +102,7 @@
   .main--character--info .origin{
     background-color: #0000;
     font-size: x-large;
+    font-weight: 700;
     font-family: 'Nanum Pen Script', cursive;
     border:none;
     text-transform: uppercase;

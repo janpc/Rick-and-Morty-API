@@ -2,8 +2,8 @@ import { getUrl } from "../data/apiRequests.js";
 import { goBack, setBack } from "../data/back.js";
 import { printMainLocation } from "../print/printMainLocation.js";
 
-function addMainCharacterListsners(event){
-    const $back=document.querySelector('.back');
+function addMainCharacterListsners(){
+    const $back=document.querySelector('.main--character--info>.back');
     $back.addEventListener('click', function(){
 
         goBack();
@@ -18,10 +18,29 @@ function addMainCharacterListsners(event){
 
 }
 
-function showLocation(target){
-    let url=target.getAttribute('data-url');
-    setBack(url, printMainLocation);
-    getUrl(url, printMainLocation);
+function removeMainCharacterListsners(){
+    const $back=document.querySelector('.back');
+    $back.removeEventListener('click', function(){
+
+        goBack();
+
+    })
+    const $origin=document.querySelector('.origin');
+    $origin.removeEventListener('click', function(event){
+
+        showLocation(event.target);
+
+    })
+
 }
 
-export { addMainCharacterListsners };
+function showLocation(target){
+    let url=target.getAttribute('data-url');
+    if(url){
+        setBack(url, printMainLocation);
+        getUrl(url, printMainLocation);
+    }
+    
+}
+
+export { addMainCharacterListsners, removeMainCharacterListsners };

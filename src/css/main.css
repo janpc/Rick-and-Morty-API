@@ -2,6 +2,8 @@
 @import './elements.css';
 @import './mainEpisode.css';
 @import './mainCharacter.css';
+@import './mainLocation.css';
+
 body{
 
     margin:0;
@@ -10,6 +12,7 @@ body{
     font-family: 'Nanum Pen Script', cursive;
     background-size: cover;
     background-position: center;
+    backdrop-filter: grayscale(0.1);
 
     scrollbar-width: 12px;
     scrollbar-color: var(#f1f1f177) var(#999);
@@ -108,7 +111,7 @@ body{
     border-radius: 20% 25% 35% 20%/ 20% 30% 15% 35%;
 }
 ::-webkit-scrollbar-track {
-background: #f1f1f177; 
+background: #f1f1f122; 
 }
 ::-webkit-scrollbar-thumb {
 background: #777; 

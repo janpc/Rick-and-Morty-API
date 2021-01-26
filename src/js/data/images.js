@@ -19,7 +19,6 @@ const rickAndMortyImages=[
 function showRandomImage(){
     if(canAnimate){
     const pos = Math.floor(Math.random() * (rickAndMortyImages.length));
-    console.log(pos)
     const left = Math.floor(Math.random() * 70);
     $randomImage.src = rickAndMortyImages[pos].src;
     $randomImage.classList.add('animate')
@@ -28,7 +27,6 @@ function showRandomImage(){
     setTimeout(function(){
         canAnimate=true;
         $randomImage.classList.remove('animate')
-        console.log('ya')
         $randomImage.src = '';
     }, 6000)}
 }

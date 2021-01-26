@@ -1,27 +1,28 @@
-import { $mainCharacter, $mainLocation } from '../data/domElements.js'
+import { $mainLocation } from '../data/domElements.js'
 import { hideAllModals } from '../listeners/mainEpisodeListeners.js';
-import { addMainCharacterListsners } from '../listeners/mainCharacterListeners.js';
+import { getCharacters } from '../data/apiRequests.js';
+import { addMainLocationListsners } from '../listeners/mainLocationListeners.js';
 
 function printMainLocation(data){
-    console.log(data.origin);
-    let color='#cc0000'
-    if(data.status=='Alive'){
-        color='green';
-    }
-    const $episode=`<div class='main--character--grid'>
-        <div class="main--character--title">
+    const $episode=`<div class='main--location--content'>
+        <div class="main--location--title">
             <h2>${data.name}</h2>
         </div>
-        <div class="main--character--info">
+        <div class="main--location--info">
             <p>Type: ${data.type}</p>
             <p>Dimension: ${data.dimension}</p>
             <button class="back" >back</button>
         </div>
+        <div id="mainLocationCharacters" class="main--location--characters">
+            <h3>Residents</h3>
+        </div>
     </div>`;
     hideAllModals();
-    $mainCharacter.classList.add('active');
-    $mainCharacter.innerHTML=$episode;
-    addMainCharacterListsners();
+    $mainLocation.classList.add('active');
+    $mainLocation.innerHTML=$episode;
+    const $mainLocationCharacters=document.getElementById('mainLocationCharacters');
+    getCharacters(data.residents, $mainLocationCharacters);
+    addMainLocationListsners();
 }
 
 export { printMainLocation };

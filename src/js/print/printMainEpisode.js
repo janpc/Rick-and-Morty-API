@@ -1,5 +1,6 @@
 import {$mainEpisode} from '../data/domElements.js'
 import { addMainEpisodeListsners, hideAllModals } from '../listeners/mainEpisodeListeners.js';
+import { getCharacters } from "../data/apiRequests.js";
 import covers from './covers.js'
 
 function printMainEpisode(data){
@@ -21,6 +22,10 @@ function printMainEpisode(data){
     </div>`;
 
     $mainEpisode.innerHTML=$episode;
+    
+    const $mainEpisodeCharacters=document.getElementById('mainEpisodeCharacters');
+    getCharacters(data.characters, $mainEpisodeCharacters);
+
     hideAllModals();
     $mainEpisode.classList.add('active');
     addMainEpisodeListsners();

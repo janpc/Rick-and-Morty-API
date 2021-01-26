@@ -8,9 +8,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    transition: width 1.5s ease-in;
+    transition: all 1.5s ease-in;
     box-shadow: 2px 2px 5px black;
-    filter: grayscale(0.5);
+    filter: grayscale(0.15);
 }
 .content--full .episodeList--episode{
     width: 18%;
@@ -33,7 +33,7 @@
 }
 
 .episodeList--episode:hover .episodeList--episode--background, .episodeList--episode:focus .episodeList--episode--background{
-    background: linear-gradient(to top, #01b4c656, #FFF0);
+    background: linear-gradient(to top,#0007,  #ffffff56);
 }
 .episodeList--episode--title{
     text-align: center;
@@ -43,7 +43,3 @@
     bottom:0px;
 
 }
-
-.episodeList--episode:hover .episodeList--episode--title,.episodeList--episode:focus .episodeList--episode--title{ 
-    color:black;
-} 

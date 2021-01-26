@@ -19,7 +19,6 @@ function printEpisode(episode){
 }
 
 function printEpisodes(data){
-    console.log(covers);
     data.forEach(episode => {
         printEpisode(episode);
     });

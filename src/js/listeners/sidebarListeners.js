@@ -1,5 +1,5 @@
 import { $content, $sidebar } from "../data/domElements.js";
-import { getUrl, getCharacters, getEpisodes } from "../data/apiRequests.js";
+import { getUrl, getEpisodes } from "../data/apiRequests.js";
 import { showRandomImage } from "../data/images.js";
 import { printMainEpisode } from "../print/printMainEpisode.js";
 import { setBack } from "../data/back.js";
@@ -30,7 +30,7 @@ function showEpisode(target) {
 
 function printMainEpisodeInfo(data) {
   printMainEpisode(data);
-  getCharacters(data);
+  
 }
 
 function detectScrollBottom() {

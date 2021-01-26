@@ -3,7 +3,6 @@ import { hideAllModals } from '../listeners/mainEpisodeListeners.js';
 import { addMainCharacterListsners } from '../listeners/mainCharacterListeners.js';
 
 function printMainCharacter(data){
-    console.log(data.origin);
     let color='#cc0000'
     if(data.status=='Alive'){
         color='green';

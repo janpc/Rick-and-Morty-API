@@ -1,8 +1,7 @@
 import { randomBorderRadius } from "./printEpisodes.js";
 
 
-function printCharacter(data){
-    const $mainEpisodeCharacters=document.getElementById('mainEpisodeCharacters');
+function printCharacter(data, elementToPrint){
     const $character=document.createElement('button');
     const $image=document.createElement('div');
     const $name=document.createElement('p');
@@ -14,15 +13,23 @@ function printCharacter(data){
 
     $character.appendChild($image);
     $character.appendChild($name);
-
-    $mainEpisodeCharacters.appendChild($character);
+    
+    elementToPrint.appendChild($character);
+    
 }
 
-function printCharacters(data){
-    data.forEach(character => {
-        
-        printCharacter(character.data);
-    });
+function printCharacters(data, elementToPrint){
+    if(data.length>0){
+        data.forEach(character => {
+            
+            printCharacter(character.data, elementToPrint);
+        });
+    }else{
+        const $info=document.createElement('p');
+        $info.innerHTML='There are no characters here.';
+        elementToPrint.appendChild($info);
+    }
+    
 }
 
 export { printCharacters };
