@@ -6,7 +6,7 @@
     position: absolute;
     left: 1em;
     bottom: 1em;
-    background-color: #0000;
+    background-color: white;
     font-size: xx-large;
     font-family: 'Nanum Pen Script', cursive;
     border-radius: 52% 56% 55% 64% / 41% 61% 42% 54%;
@@ -50,7 +50,7 @@
       "img"
       "title"
       "date";
-    grid-template-rows: 60% 13% 27%;
+    grid-template-rows: 60% 8% 32%;
     grid-template-columns: 100%;
     border-radius: 0% 3% 2% 0 / 0 2% 4% 0;
     border-right: 2px solid black;
